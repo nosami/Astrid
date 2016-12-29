@@ -11,7 +11,7 @@
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <AndroidResgenClass>Resource</AndroidResgenClass>
-    <AndroidResgenFile>Resources\Resource.designer.fs</AndroidResgenFile>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidApplication>True</AndroidApplication>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
     <AssemblyName>Astrid.Mobile.Droid</AssemblyName>
@@ -53,7 +53,6 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.FSharp.targets" />
   <ItemGroup>
     <AndroidAsset Include="Assets\AboutAssets.txt" />
-    <Compile Include="Resources\Resource.designer.fs" />
     <None Include="Resources\AboutResources.txt" />
     <AndroidResource Include="Resources\layout\Main.axml">
       <SubType>Designer</SubType>
@@ -67,15 +66,18 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="FormsViewGroup">
-      <HintPath>..\packages\Xamarin.Forms.2.3.3.175\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="FSharp.Core">
       <Private>True</Private>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="FormsViewGroup">
+      <HintPath>..\packages\Xamarin.Forms.2.3.3.175\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ReactiveUI">
       <HintPath>..\packages\reactiveui-core.7.0.0\lib\MonoAndroid403\ReactiveUI.dll</HintPath>
       <Private>True</Private>
@@ -88,7 +90,6 @@
       <HintPath>..\packages\Splat.1.4.0\lib\monoandroid\Splat.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System" />
     <Reference Include="System.Reactive.Core">
       <HintPath>..\packages\Rx-Core.2.2.5\lib\portable-windows8+net45+wp8\System.Reactive.Core.dll</HintPath>
       <Private>True</Private>
@@ -105,8 +106,6 @@
       <HintPath>..\packages\Rx-PlatformServices.2.2.5\lib\portable-windows8+net45+wp8\System.Reactive.PlatformServices.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
     <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
       <HintPath>..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.23.3.0\lib\MonoAndroid403\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
       <Private>True</Private>
@@ -158,6 +157,9 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.3.3.175\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="Xamarin.Android.FSharp.ResourceProvider.Runtime">
+      <HintPath>..\packages\Xamarin.Android.FSharp.ResourceProvider.1.0.0.13\lib\Xamarin.Android.FSharp.ResourceProvider.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

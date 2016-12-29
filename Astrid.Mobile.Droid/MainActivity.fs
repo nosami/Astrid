@@ -18,6 +18,8 @@ type XamarinForms = Xamarin.Forms.Forms
 
 type IAstridPlatform = inherit IPlatform
 
+type Resources = Astrid.Mobile.Droid.Resource
+
 type DroidPlatform() =
     interface IAstridPlatform with
         member __.GetMainPage() = new RoutedViewHost() :> Page
